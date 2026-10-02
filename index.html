@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solenne — Residences on Lake Ilse</title>
+    <meta
+      name="description"
+      content="Solenne is forty-two residences behind a single limestone arcade on the western shore of Lake Ilse. Completion spring 2027."
+    />
+    <meta name="theme-color" content="#340C24" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      // Reveals are hidden only once JS is confirmed running. If the module
+      // never boots, drop the flag so every piece of content stays visible.
+      (function (d) {
+        var h = d.documentElement;
+        h.classList.add("js");
+        setTimeout(function () {
+          if (!window.__solenneBooted) h.classList.remove("js");
+        }, 6000);
+      })(document);
+    </script>
+    <link rel="preload" href="/fonts/bodoni-moda-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/archivo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- preload:images -->
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- Preloader: plum curtain with an arch-shaped hole driven by --arch-w / --arch-y -->
+    <div class="preloader-root" aria-hidden="true">
+      <div class="preloader" data-preloader>
+        <p class="preloader__watermark script">Lake Ilse</p>
+        <div class="preloader__lockup">
+          <svg class="preloader__mark" viewBox="0 0 100 100" focusable="false">
+            <use href="#mark-symbol"></use>
+          </svg>
+          <p class="label preloader__name" data-reveal="h">Solenne</p>
+          <span class="preloader__rule" data-reveal="line"></span>
+          <p class="label preloader__sub" data-reveal="ctn">Residences on Lake Ilse</p>
+        </div>
+        <div class="preloader__bar"><span class="preloader__bar-fill"></span></div>
+      </div>
+      <div class="preloader__arch preloader__arch--inner"></div>
+      <div class="preloader__arch preloader__arch--outer"></div>
+    </div>
+
+    <svg class="sr-only" aria-hidden="true" focusable="false">
+      <defs>
+        <path id="mark-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
+        <g id="mark-symbol">
+          <g class="mark__ring">
+            <text class="mark__text">
+              <textPath href="#mark-circle" textLength="236" lengthAdjust="spacing">SOLENNE · LAKE ILSE · RESIDENCES ·</textPath>
+            </text>
+          </g>
+          <path class="mark__glyph" d="M42 63V49a8 8 0 0 1 16 0v14" />
+          <path class="mark__glyph" d="M38 63h24" />
+        </g>
+      </defs>
+    </svg>
+
+    <header class="hud" data-loading-inert>
+      <a class="mark" href="#top" data-theme aria-label="Solenne — back to top">
+        <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <g class="mark__ring" data-mark-ring>
+            <text class="mark__text">
+              <textPath href="#mark-circle" textLength="236" lengthAdjust="spacing">SOLENNE · LAKE ILSE · RESIDENCES ·</textPath>
+            </text>
+          </g>
+          <path class="mark__glyph" d="M42 63V49a8 8 0 0 1 16 0v14" />
+          <path class="mark__glyph" d="M38 63h24" />
+        </svg>
+      </a>
+      <nav class="nav" aria-label="Primary" data-theme>
+        <ul>
+          <li class="nav__hide-sm"><a href="#overview">Overview</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#residences">Residences</a></li>
+          <li>
+            <button class="nav__cta" type="button" data-modal-open="enquire" aria-haspopup="dialog" aria-expanded="false" aria-controls="enquire" data-magnetic>
+              Enquire
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="progress" aria-label="Scroll progress" data-theme data-loading-inert>
+      <p class="label progress__count"><span class="sr-only">Scrolled </span><span data-counter>00</span><span class="progress__of" aria-hidden="true">/99</span></p>
+      <div class="rail" data-rail>
+        <span class="rail__track" aria-hidden="true"></span>
+        <span class="rail__fill" aria-hidden="true"></span>
+        <span class="rail__runner">
+          <button class="rail__thumb" type="button" data-rail-thumb aria-label="Scroll position. Drag, or use the arrow keys, to move through the page.">
+            <span class="rail__dot" aria-hidden="true"></span>
+          </button>
+        </span>
+      </div>
+    </aside>
+
+    <div class="page" data-loading-inert>
+      <main id="main" tabindex="-1">
+        <!-- 5.1 Hero — the dive -->
+        <section class="hero scroll-area" id="top" data-bg="dark" aria-labelledby="hero-title" tabindex="-1">
+          <div class="scroll-area__screen hero__screen">
+            <div class="hero__bg">
+              <x-pic
+                name="hero"
+                eager
+                class="hero__img"
+                sizes="100vw"
+                alt="A long, low limestone arcade on the shore of Lake Ilse at dusk; its central doorway glows and the whole building is mirrored in still water."
+              ></x-pic>
+            </div>
+            <div class="hero__scrim" aria-hidden="true"></div>
+            <div class="hero__content" data-reveal="w" data-reveal-manual>
+              <p class="label" data-reveal="ctn">Forty-two residences&ensp;·&ensp;Western shore</p>
+              <h1 class="display hero__title" id="hero-title" data-reveal="a">Solenne</h1>
+              <p class="label hero__foot" data-reveal="ctn">Completion spring 2027<span class="hero__dot" aria-hidden="true"></span>Scroll to enter</p>
+            </div>
+            <div class="hero__veil" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <!-- 5.2 Display type — word-spacing spread -->
+        <section class="statement" data-bg="color" aria-labelledby="statement-title">
+          <h2 class="display statement__line" id="statement-title" data-spread>
+            <span>Wide sky,</span>
+            <span>still lake</span>
+          </h2>
+        </section>
+
+        <!-- Overview — parallax columns -->
+        <section class="overview" id="overview" data-bg="light" aria-labelledby="overview-title" tabindex="-1">
+          <div class="overview__text" data-reveal="w" data-parallax="w">
+            <h2 class="label section-label" id="overview-title" data-reveal="ctn"><span class="section-label__n">01</span>Overview</h2>
+            <p class="lead" data-reveal="p">
+              Solenne is forty-two homes set behind a single arcade of pale limestone, facing west across Lake Ilse. Every residence takes the evening light, and none of them
+              looks at another.
+            </p>
+            <p data-reveal="p">
+              The building is low, long and quiet: a line drawn between the water and the hills, with walled gardens running down to a private shore and a pier for swimming
+              before breakfast.
+            </p>
+            <dl class="facts" data-reveal="ctn">
+              <div><dt class="label">Residences</dt><dd>42</dd></div>
+              <div><dt class="label">Gardens</dt><dd>3.2 hectares</dd></div>
+              <div><dt class="label">Private shore</dt><dd>180 metres</dd></div>
+              <div><dt class="label">Completion</dt><dd>Spring 2027</dd></div>
+            </dl>
+          </div>
+          <figure class="overview__fig overview__fig--tall" data-parallax="w">
+            <div class="media media--portrait" data-reveal="slide">
+              <x-pic
+                name="overview-facade"
+                data-parallax="img"
+                sizes="(min-width: 992px) 34vw, 92vw"
+                alt="Two columns of deep arched loggias cut into warm limestone, with a strip of blue sky above and a raking afternoon shadow."
+              ></x-pic>
+            </div>
+            <figcaption class="label">The garden elevation, late afternoon</figcaption>
+          </figure>
+          <figure class="overview__fig overview__fig--video" data-parallax="ctn-up" data-mob="off">
+            <div class="media media--video" data-reveal="slide">
+              <video muted playsinline loop preload="metadata" poster="/video/leaves-poster.webp" width="720" height="900" aria-hidden="true" data-scroll-video>
+                <source src="/video/leaves.webm" type="video/webm" />
+                <source src="/video/leaves.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="label">Shade from the plane trees, west terrace</figcaption>
+          </figure>
+          <figure class="overview__fig overview__fig--wide" data-parallax="w">
+            <div class="media media--landscape" data-reveal="slide">
+              <x-pic
+                name="overview-interior"
+                data-parallax="img-out"
+                sizes="(min-width: 992px) 46vw, 92vw"
+                alt="A plaster-walled room with an oak floor and one tall arched window looking out over the lake; the light falls in an arch across the boards."
+              ></x-pic>
+            </div>
+            <figcaption class="label">Every principal room faces the water</figcaption>
+          </figure>
+        </section>
+
+        <!-- 5.3 Location — horizontal scroll -->
+        <section class="location scroll-area" id="location" data-bg="light" aria-labelledby="location-title" tabindex="-1">
+          <div class="scroll-area__screen location__screen">
+            <div class="location__track" data-h-track>
+              <div class="loc-panel loc-panel--title">
+                <h2 class="display location__title" id="location-title">
+                  <span class="location__line">The</span>
+                  <span class="location__line">Western</span>
+                  <span class="location__line">Shore</span>
+                </h2>
+              </div>
+
+              <div class="loc-panel loc-panel--wide" data-reveal="w">
+                <figure>
+                  <div class="media media--arch media--pano" data-arch-reveal>
+                    <x-pic
+                      name="location-panorama"
+                      sizes="(min-width: 992px) 58vw, 92vw"
+                      alt="Morning mist over Lake Ilse with layered blue hills behind and a timber pier running out into the water."
+                    ></x-pic>
+                  </div>
+                  <figcaption class="label" data-reveal="ctn"><span class="section-label__n">02</span>Morning, from the private pier</figcaption>
+                </figure>
+                <p data-reveal="p">
+                  The lake is eleven kilometres long and never more than two wide. Solenne sits where it bends west, so the sun sets straight down the water in summer and the
+                  far shore is close enough to wave to.
+                </p>
+              </div>
+
+              <div class="loc-panel loc-panel--split" data-reveal="w">
+                <div class="media media--arch media--tall" data-arch-reveal>
+                  <video muted playsinline loop preload="metadata" poster="/video/water-poster.webp" width="1280" height="720" aria-hidden="true" data-scroll-video>
+                    <source src="/video/water.webm" type="video/webm" />
+                    <source src="/video/water.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="distances">
+                  <h3 class="label" data-reveal="ctn">From the gate</h3>
+                  <ol class="distances__list">
+                    <li data-reveal="ctn" data-reveal-first><span>Ilse village &amp; market</span><span class="label">6 min walk</span></li>
+                    <li data-reveal="ctn" data-reveal-first><span>Ferry to the east shore</span><span class="label">9 min walk</span></li>
+                    <li data-reveal="ctn" data-reveal-first><span>Golf &amp; rowing club</span><span class="label">7 min drive</span></li>
+                    <li data-reveal="ctn" data-reveal-first><span>Mainline station</span><span class="label">18 min drive</span></li>
+                    <li data-reveal="ctn" data-reveal-first><span>Ski lifts, Col d'Aval</span><span class="label">50 min drive</span></li>
+                    <li data-reveal="ctn" data-reveal-first><span>International airport</span><span class="label">55 min drive</span></li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="loc-panel loc-panel--portrait" data-reveal="w">
+                <div class="media media--arch media--portrait" data-arch-reveal>
+                  <x-pic
+                    name="location-reeds"
+                    sizes="(min-width: 992px) 30vw, 92vw"
+                    alt="Reeds silhouetted against bright water at the edge of the lake, with seed heads catching the light."
+                  ></x-pic>
+                </div>
+                <p data-reveal="p">Reed beds along the shore are protected, so the view stays as it is: herons in the morning, swifts in the evening, no motorboats.</p>
+              </div>
+
+              <div class="loc-panel loc-panel--wide loc-panel--last" data-reveal="w">
+                <div class="media media--arch media--landscape" data-arch-reveal>
+                  <x-pic
+                    name="location-hills"
+                    sizes="(min-width: 992px) 48vw, 92vw"
+                    alt="Layered violet hills at dusk under a pink sky, reflected in the calm lake."
+                  ></x-pic>
+                </div>
+                <p data-reveal="p">Behind the water, the hills: forty minutes of switchbacks to the first ridge, and walking paths that begin at the garden gate.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5.4 Amenities — zoom-through hand-off -->
+        <section class="amen scroll-area" id="amenities" data-bg="light" aria-labelledby="amen-title" data-reveal-trigger tabindex="-1">
+          <div class="scroll-area__screen amen__screen">
+            <div class="amen__next" aria-hidden="true"></div>
+            <div class="amen__layer">
+              <div class="amen__grid" data-reveal="w">
+                <figure class="amen__tile">
+                  <div class="media" data-reveal="line"><x-pic name="amenity-pool" sizes="(min-width: 992px) 30vw, 46vw" alt="A turquoise pool set into pale stone paving, with light rippling across its floor."></x-pic></div>
+                  <figcaption class="label">Pool</figcaption>
+                </figure>
+                <figure class="amen__tile">
+                  <div class="media" data-reveal="line"><x-pic name="amenity-spa" sizes="(min-width: 992px) 30vw, 46vw" alt="A warm stone thermal room with steam rising in front of a glowing arched niche."></x-pic></div>
+                  <figcaption class="label">Thermal suite</figcaption>
+                </figure>
+                <figure class="amen__tile">
+                  <div class="media" data-reveal="line"><x-pic name="amenity-library" sizes="(min-width: 992px) 30vw, 46vw" alt="Three arched alcoves lined floor to ceiling with books in plum, blue and pink spines."></x-pic></div>
+                  <figcaption class="label">Library</figcaption>
+                </figure>
+                <figure class="amen__tile">
+                  <div class="media" data-reveal="line"><x-pic name="amenity-garden" sizes="(min-width: 992px) 30vw, 46vw" alt="A gravel path winding through soft green planting in the walled garden."></x-pic></div>
+                  <figcaption class="label">Walled garden</figcaption>
+                </figure>
+                <div class="amen__text">
+                  <h2 class="label section-label" id="amen-title" data-reveal="ctn"><span class="section-label__n">03</span>Amenities</h2>
+                  <p data-reveal="p">Eight shared rooms, each built around one quiet thing: water, steam, books, shade, wine, a boat, citrus, and arriving home.</p>
+                </div>
+                <figure class="amen__tile">
+                  <div class="media" data-reveal="line"><x-pic name="amenity-cellar" sizes="(min-width: 992px) 30vw, 46vw" alt="A vaulted brick cellar receding into darkness, lit by two warm wall lamps."></x-pic></div>
+                  <figcaption class="label">Cellar</figcaption>
+                </figure>
+                <figure class="amen__tile">
+                  <div class="media" data-reveal="line"><x-pic name="amenity-boathouse" sizes="(min-width: 992px) 30vw, 46vw" alt="A timber boathouse with a lit arched door at the end of a pier, at dusk."></x-pic></div>
+                  <figcaption class="label">Boathouse</figcaption>
+                </figure>
+                <figure class="amen__tile">
+                  <div class="media" data-reveal="line"><x-pic name="amenity-orangery" sizes="(min-width: 992px) 30vw, 46vw" alt="Tall glazed arches of the orangery, with dense green citrus planting inside."></x-pic></div>
+                  <figcaption class="label">Orangery</figcaption>
+                </figure>
+                <figure class="amen__tile">
+                  <div class="media" data-reveal="line"><x-pic name="amenity-lobby" sizes="(min-width: 992px) 30vw, 46vw" alt="The arrival hall: a row of stone arches open to the sky, reflected in a polished floor."></x-pic></div>
+                  <figcaption class="label">Arrival hall</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5.5 Architecture — clip-path curtains as a camera -->
+        <section class="archi scroll-area" id="architecture" data-bg="dark" aria-labelledby="archi-title" tabindex="-1">
+          <div class="scroll-area__screen archi__screen">
+            <div class="archi__frame">
+              <div class="archi__half archi__half--l">
+                <x-pic
+                  name="architecture"
+                  sizes="100vw"
+                  alt="The full lake elevation: two storeys of round arches in pale limestone, nine above and seven below, under a clear evening sky."
+                ></x-pic>
+              </div>
+              <div class="archi__half archi__half--r" aria-hidden="true">
+                <x-pic name="architecture" sizes="100vw" alt=""></x-pic>
+              </div>
+            </div>
+            <span class="archi__motif archi__motif--l" aria-hidden="true"></span>
+            <span class="archi__motif archi__motif--r" aria-hidden="true"></span>
+            <div class="archi__caption">
+              <h2 class="label section-label" id="archi-title"><span class="section-label__n">04</span>Architecture</h2>
+              <p>One continuous arcade, 214 metres long, in hand-dressed limestone from a quarry twelve kilometres up the valley.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Residences — rises to meet the architecture frame -->
+        <section class="res" id="residences" data-bg="light" aria-labelledby="res-title" tabindex="-1">
+          <div class="res__inner">
+            <div class="res__head" data-reveal="w">
+              <h2 class="label section-label" id="res-title" data-reveal="ctn"><span class="section-label__n">05</span>Residences</h2>
+              <p class="lead" data-reveal="p">
+                One- to three-bedroom apartments and four penthouses, all dual aspect, all with a loggia on the water. Ceilings are 3.2 metres; the windows go all the way
+                down.
+              </p>
+            </div>
+
+            <div class="tabs" data-tabs>
+              <div class="tabs__list" role="tablist" aria-label="Residence types">
+                <button class="tabs__tab" type="button" role="tab" id="tab-one" aria-selected="true" aria-controls="panel-one">One bedroom</button>
+                <button class="tabs__tab" type="button" role="tab" id="tab-two" aria-selected="false" aria-controls="panel-two" tabindex="-1">Two bedroom</button>
+                <button class="tabs__tab" type="button" role="tab" id="tab-three" aria-selected="false" aria-controls="panel-three" tabindex="-1">Three bedroom</button>
+                <button class="tabs__tab" type="button" role="tab" id="tab-pent" aria-selected="false" aria-controls="panel-pent" tabindex="-1">Penthouse</button>
+              </div>
+
+              <div class="tabs__panel" role="tabpanel" id="panel-one" aria-labelledby="tab-one" tabindex="0" data-reveal="w" data-reveal-manual>
+                <figure class="tabs__fig">
+                  <div class="media media--landscape" data-res-reveal>
+                    <x-pic name="residence-one" sizes="(min-width: 992px) 56vw, 92vw" alt="A one-bedroom residence: a low bed beneath a tall arched window onto the lake."></x-pic>
+                  </div>
+                </figure>
+                <div class="tabs__body">
+                  <h3 class="label" data-reveal="ctn">One bedroom · 14 homes</h3>
+                  <p data-reveal="p">A single long room that opens on to the loggia, with the bedroom set back behind sliding oak screens.</p>
+                  <dl class="specs" data-reveal="ctn">
+                    <div><dt class="label">Interior</dt><dd>78–92 m²</dd></div>
+                    <div><dt class="label">Loggia</dt><dd>16 m²</dd></div>
+                    <div><dt class="label">Aspect</dt><dd>West, lake</dd></div>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="tabs__panel" role="tabpanel" id="panel-two" aria-labelledby="tab-two" tabindex="0" hidden data-reveal="w" data-reveal-manual>
+                <figure class="tabs__fig">
+                  <div class="media media--landscape" data-res-reveal>
+                    <x-pic name="residence-two" sizes="(min-width: 992px) 56vw, 92vw" alt="A two-bedroom living room with a sky-blue sofa facing an arched window and the water."></x-pic>
+                  </div>
+                </figure>
+                <div class="tabs__body">
+                  <h3 class="label" data-reveal="ctn">Two bedroom · 16 homes</h3>
+                  <p data-reveal="p">Living space runs the full depth of the building, so mornings come in from the garden and evenings from the lake.</p>
+                  <dl class="specs" data-reveal="ctn">
+                    <div><dt class="label">Interior</dt><dd>118–136 m²</dd></div>
+                    <div><dt class="label">Loggia</dt><dd>22 m²</dd></div>
+                    <div><dt class="label">Aspect</dt><dd>West &amp; east</dd></div>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="tabs__panel" role="tabpanel" id="panel-three" aria-labelledby="tab-three" tabindex="0" hidden data-reveal="w" data-reveal-manual>
+                <figure class="tabs__fig">
+                  <div class="media media--landscape" data-res-reveal>
+                    <x-pic name="residence-three" sizes="(min-width: 992px) 56vw, 92vw" alt="A three-bedroom kitchen with a long pale stone island and the lake visible through an arched window."></x-pic>
+                  </div>
+                </figure>
+                <div class="tabs__body">
+                  <h3 class="label" data-reveal="ctn">Three bedroom · 8 homes</h3>
+                  <p data-reveal="p">Corner residences at either end of the arcade, each with a kitchen on the water and a second loggia over the garden.</p>
+                  <dl class="specs" data-reveal="ctn">
+                    <div><dt class="label">Interior</dt><dd>164–188 m²</dd></div>
+                    <div><dt class="label">Loggias</dt><dd>2 × 20 m²</dd></div>
+                    <div><dt class="label">Aspect</dt><dd>Three sides</dd></div>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="tabs__panel" role="tabpanel" id="panel-pent" aria-labelledby="tab-pent" tabindex="0" hidden data-reveal="w" data-reveal-manual>
+                <figure class="tabs__fig">
+                  <div class="media media--landscape" data-res-reveal>
+                    <x-pic name="residence-penthouse" sizes="(min-width: 992px) 56vw, 92vw" alt="A penthouse roof terrace with a stone balustrade and violet hills across the lake at dusk."></x-pic>
+                  </div>
+                </figure>
+                <div class="tabs__body">
+                  <h3 class="label" data-reveal="ctn">Penthouse · 4 homes</h3>
+                  <p data-reveal="p">The whole roof of each pavilion: a single storey of rooms around a terrace that looks down the length of the lake.</p>
+                  <dl class="specs" data-reveal="ctn">
+                    <div><dt class="label">Interior</dt><dd>212–240 m²</dd></div>
+                    <div><dt class="label">Terrace</dt><dd>140 m²</dd></div>
+                    <div><dt class="label">Aspect</dt><dd>All round</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="spec" data-reveal="w">
+              <h3 class="label spec__title" data-reveal="ctn">Specification</h3>
+              <div class="accordion" data-accordion>
+                <div class="accordion__item">
+                  <h4 class="accordion__heading">
+                    <button class="accordion__btn" type="button" id="acc-btn-1" aria-expanded="false" aria-controls="acc-1">Structure &amp; envelope<span class="accordion__icon" aria-hidden="true"></span></button>
+                  </h4>
+                  <div class="accordion__panel" id="acc-1" role="region" aria-labelledby="acc-btn-1" hidden>
+                    <p>Load-bearing limestone over a concrete frame. Triple-glazed timber windows, full height, with external linen blinds set into every arch.</p>
+                  </div>
+                </div>
+                <div class="accordion__item">
+                  <h4 class="accordion__heading">
+                    <button class="accordion__btn" type="button" id="acc-btn-2" aria-expanded="false" aria-controls="acc-2">Interiors<span class="accordion__icon" aria-hidden="true"></span></button>
+                  </h4>
+                  <div class="accordion__panel" id="acc-2" role="region" aria-labelledby="acc-btn-2" hidden>
+                    <p>Lime plaster walls, wide-board oak floors, honed stone in kitchens and bathrooms. Joinery in oiled oak, made in the valley.</p>
+                  </div>
+                </div>
+                <div class="accordion__item">
+                  <h4 class="accordion__heading">
+                    <button class="accordion__btn" type="button" id="acc-btn-3" aria-expanded="false" aria-controls="acc-3">Energy<span class="accordion__icon" aria-hidden="true"></span></button>
+                  </h4>
+                  <div class="accordion__panel" id="acc-3" role="region" aria-labelledby="acc-btn-3" hidden>
+                    <p>Lake-source heat pumps for heating and cooling, photovoltaic roofs on the pavilions, and heat recovery ventilation in every home.</p>
+                  </div>
+                </div>
+                <div class="accordion__item">
+                  <h4 class="accordion__heading">
+                    <button class="accordion__btn" type="button" id="acc-btn-4" aria-expanded="false" aria-controls="acc-4">Services<span class="accordion__icon" aria-hidden="true"></span></button>
+                  </h4>
+                  <div class="accordion__panel" id="acc-4" role="region" aria-labelledby="acc-btn-4" hidden>
+                    <p>A resident manager on site, mooring for every home, secure underground parking with charging, and a daily boat to the village in summer.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- 5.6 Footer — the page closes on itself -->
+      <div class="closing scroll-area" data-bg="dark">
+        <div class="scroll-area__screen closing__screen">
+          <div class="page-card" data-page-clip>
+            <x-pic
+              name="closing"
+              class="page-card__img"
+              sizes="100vw"
+              alt="Solenne at night from across the lake: a row of warmly lit arches above dark water."
+            ></x-pic>
+            <div class="page-card__text">
+              <p class="label">Sales gallery open by appointment</p>
+              <button class="btn btn--paper" type="button" data-modal-open="enquire" aria-haspopup="dialog" aria-expanded="false" aria-controls="enquire" data-magnetic>
+                Arrange a visit
+              </button>
+            </div>
+          </div>
+          <footer class="footer" data-footer>
+            <div class="footer-inner" data-reveal="w" data-reveal-manual>
+              <div class="footer__col footer__col--l">
+                <p class="label" data-reveal="ctn">Sales gallery</p>
+                <address data-reveal="ctn">4 Quai des Saules<br />Ilse, west shore</address>
+                <p data-reveal="ctn"><a class="link" href="mailto:enquiries@solenne.example">Email us</a></p>
+              </div>
+              <nav class="footer__col footer__col--r" aria-label="Footer">
+                <ul>
+                  <li data-reveal="ctn"><a class="link" href="#overview">Overview</a></li>
+                  <li data-reveal="ctn"><a class="link" href="#location">Location</a></li>
+                  <li data-reveal="ctn"><a class="link" href="#amenities">Amenities</a></li>
+                  <li data-reveal="ctn"><a class="link" href="#residences">Residences</a></li>
+                  <li data-reveal="ctn"><a class="link" href="#top">Back to top</a></li>
+                </ul>
+              </nav>
+              <p class="footer__sign script" data-reveal="ctn">Solenne</p>
+              <p class="label footer__legal" data-reveal="ctn">© 2026 Solenne. A fictional development; all imagery is illustrative.</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <dialog class="modal" id="enquire" aria-labelledby="enquire-title">
+      <div class="modal__inner">
+        <button class="modal__close label" type="button" data-modal-close>Close<span class="sr-only"> enquiry form</span></button>
+        <h2 class="label section-label" id="enquire-title"><span class="section-label__n">✦</span>Enquire</h2>
+        <p class="modal__intro">Tell us a little about what you are looking for and we will be in touch within two working days.</p>
+        <form class="form" data-enquire-form novalidate>
+          <div class="form__row">
+            <label class="label" for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="form__row">
+            <label class="label" for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="form__row">
+            <label class="label" for="f-type">Residence</label>
+            <select id="f-type" name="type">
+              <option>One bedroom</option>
+              <option>Two bedroom</option>
+              <option>Three bedroom</option>
+              <option>Penthouse</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="label" for="f-msg">Message <span class="form__opt">(optional)</span></label>
+            <textarea id="f-msg" name="message" rows="3"></textarea>
+          </div>
+          <p class="form__error" role="alert" data-form-error></p>
+          <button class="btn" type="submit">Send enquiry</button>
+        </form>
+        <p class="modal__thanks" role="status" data-form-thanks hidden>Thank you. We will be in touch within two working days.</p>
+      </div>
+    </dialog>
+  </body>
+</html>
