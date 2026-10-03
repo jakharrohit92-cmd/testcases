@@ -22,7 +22,7 @@ function picturePlugin() {
           for (const [, k, v] of raw.matchAll(/([\w:-]+)(?:="([^"]*)")?/g)) attrs[k] = v ?? "";
           const entry = m[attrs.name];
           if (!entry) throw new Error(`x-pic: unknown image "${attrs.name}"`);
-          const set = (ext) => entry.sizes.map((w) => `/img/${attrs.name}-${w}.${ext} ${w}w`).join(", ");
+          const set = (ext) => entry.sizes.map((w) => `img/${attrs.name}-${w}.${ext} ${w}w`).join(", ");
           const sizes = attrs.sizes || "100vw";
           const eager = "eager" in attrs;
           const pass = Object.entries(attrs)
